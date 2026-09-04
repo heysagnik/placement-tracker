@@ -33,7 +33,7 @@ st.markdown("""
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
     }
-    * {
+    *:not([data-testid="stIconMaterial"]) {
         color-scheme: light !important;
         font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Segoe UI", Roboto, "Helvetica Neue", sans-serif !important;
     }
@@ -374,9 +374,9 @@ rounds_26 = b26.get("rounds", [])
 if rounds_26:
     with st.container(border=True, key="timeline_card"):
         render('<div class="section-title">2026 Hiring Timeline</div>')
-        timeline_df = pd.DataFrame(rounds_26).fillna("—")
+        timeline_df = pd.DataFrame(rounds_26).fillna("—").astype(str)
         timeline_df.columns = [c.replace("_", " ").title() for c in timeline_df.columns]
-        st.dataframe(timeline_df, use_container_width=True, hide_index=True)
+        st.dataframe(timeline_df, width="stretch", hide_index=True)
 
 st.write("")
 
@@ -384,7 +384,7 @@ with st.expander("Explore all recruiters"):
     directory_df = build_directory(companies_db)
     search_query = st.text_input("Filter by name", "", key="dir_search_filter", label_visibility="collapsed", placeholder="Filter by name")
     view_df = directory_df[directory_df["Company"].str.contains(search_query, case=False, na=False)] if search_query else directory_df.sort_values("2026 Placed", ascending=False)
-    st.dataframe(view_df, use_container_width=True, hide_index=True)
+    st.dataframe(view_df, width="stretch", hide_index=True)
 
     dl_col1, dl_col2 = st.columns(2)
     with dl_col1:
