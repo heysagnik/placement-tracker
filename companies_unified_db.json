@@ -4875,7 +4875,7 @@
       "bce_placed": 58
     },
     "batch_2025": {
-      "total_selections": 1,
+      "total_selections": 676,
       "avg_ctc": "6.5 LPA",
       "max_ctc": null,
       "min_ctc": null,
@@ -4914,8 +4914,12 @@
     },
     "campus_breakdown": {
       "batch_2026": {
-        "distribution": {},
-        "total_tracked": 0
+        "distribution": {
+          "Amaravati": 232,
+          "Vellore": 116,
+          "Chennai": 37
+        },
+        "total_tracked": 385
       },
       "batch_2025": {
         "distribution": {
@@ -11104,7 +11108,7 @@
       "bce_placed": 112
     },
     "batch_2025": {
-      "total_selections": 89,
+      "total_selections": 599,
       "avg_ctc": "7.7 LPA",
       "max_ctc": null,
       "min_ctc": null,
@@ -21702,9 +21706,11 @@
     "campus_breakdown": {
       "batch_2026": {
         "distribution": {
-          "Vellore": 4
+          "Vellore": 81,
+          "Amaravati": 51,
+          "Chennai": 49
         },
-        "total_tracked": 4
+        "total_tracked": 181
       },
       "batch_2025": {
         "distribution": {
@@ -26827,9 +26833,11 @@
     "campus_breakdown": {
       "batch_2026": {
         "distribution": {
-          "Vellore": 2
+          "Vellore": 3,
+          "Amaravati": 2,
+          "Chennai": 1
         },
-        "total_tracked": 2
+        "total_tracked": 6
       },
       "batch_2025": {
         "distribution": {
